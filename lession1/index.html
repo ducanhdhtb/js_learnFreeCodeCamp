@@ -2,18 +2,22 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title> Target the Children of an Element Using jQuery</title>
+	<title> Target a Specific Child of an Element Using jQuery</title>
 	<script src="https://code.jquery.com/jquery-3.3.1.js"integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="crossorigin="anonymous"></script>
   <link rel="stylesheet" href="bounce.css">
 </head>
 <body>
-<!-- When HTML elements are placed one level below another they are called children of that element. For example, the button elements in this challenge with the text "#target1", "#target2", and "#target3" are all children of the <div class="well" id="left-well"> element.
+<!-- You've seen why id attributes are so convenient for targeting with jQuery selectors. But you won't always have such neat ids to work with.
 
-jQuery has a function called children() that allows you to access the children of whichever element you've selected.
+Fortunately, jQuery has some other tricks for targeting the right elements.
 
-Here's an example of how you would use the children() function to give the children of your left-well element the color blue:
+jQuery uses CSS Selectors to target elements. The target:nth-child(n) CSS selector allows you to select all the nth elements with the target class or element type.
 
-$("#left-well").children().css("color", "blue") -->
+Here's how you would give the third element in each well the bounce class:
+
+$(".target:nth-child(3)").addClass("animated bounce");
+
+Make the second child in each of your well elements bounce. You must select the elements' children with the target class. -->
 <script>
   $(document).ready(function() {
     $("#target1").css("color", "red");
@@ -21,37 +25,9 @@ $("#left-well").children().css("color", "blue") -->
     $("#target4").remove();
     $("#target2").appendTo("#right-well");
     $("#target5").clone().appendTo("#left-well");
-
-  });
-</script>
-
-<!-- Only change code above this line. -->
-
-<body>
-  <script>
-  $(document).ready(function() {
-    $("#target1").css("color", "red");
-    $("#target1").prop("disabled", true);
-    $("#target4").remove();
-    $("#target2").appendTo("#right-well");
-    $("#target5").clone().appendTo("#left-well");
     $("#target1").parent().css("background-color", "red");
-
-  });
-</script>
-
-<!-- Only change code above this line. -->
-
-<body>
- <script>
-  $(document).ready(function() {
-    $("#target1").css("color", "red");
-    $("#target1").prop("disabled", true);
-    $("#target4").remove();
-    $("#target2").appendTo("#right-well");
-    $("#target5").clone().appendTo("#left-well");
-    $("#target1").parent().css("background-color", "red");
-    $("#left-well").children().css("color", "orange")
+    $("#right-well").children().css("color", "orange");
+    $(".target:nth-child(2)").addClass("animated bounce");
 
   });
 </script>
