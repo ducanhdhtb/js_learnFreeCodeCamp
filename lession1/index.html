@@ -2,32 +2,24 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Free Code Camp:lesstion 3-jQuery: jQuery: Target the Same Element with Multiple jQuery Selectors</title>
+	<title>Free Code Camp:lesstion 7-jQuery: jQuery: jQuery: Remove Classes from an Element with jQuery</title>
 	<script src="https://code.jquery.com/jquery-3.3.1.js"integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="crossorigin="anonymous"></script>
   <link rel="stylesheet" href="bounce.css">
 </head>
 <body>
-<!-- Now you know three ways of targeting elements: by type: $("button"), by class: $(".btn"), and by id $("#target1").
-
-Although it is possible to add multiple classes in a single .addClass() call, let's add them to the same element in three separate ways.
-
-Using .addClass(), add only one class at a time to the same element, three different ways:
-
-Add the animated class to all elements with type button.
-
-Add the shake class to all the buttons with class .btn.
-
-Add the btn-primary class to the button with id #target1.
-
-Note
-You should only be targeting one element and adding only one class at a time. Altogether, your three individual selectors will end up adding the three classes shake, animated, and btn-primary to #target1. -->
-<script>
+ <!--  In the same way you can add classes to an element with jQuery's addClass() function, you can remove them with jQuery's removeClass() function.
+ 
+ Here's how you would do this for a specific button:
+ 
+ $("#target2").removeClass("btn-default");
+ 
+ Let's remove the btn-default class from all of our button elements -->
+ <script>
   $(document).ready(function() {
-    $("button").addClass("animated");
-    $(".btn").addClass("shake");
-    $("#target1").addClass("animated ");
-    $("#target1").addClass("shake");
-    $("#target1").addClass("btn-primary")
+    $("button").addClass("animated bounce");
+    $(".well").addClass("animated shake");
+    $("#target3").addClass("animated fadeOut");
+    $("#target2").removeClass("btn-default"); 
   });
 </script>
 
