@@ -2,20 +2,18 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title> Target Even Elements Using jQuery</title>
+	<title> Use jQuery to Modify the Entire Page</title>
 	<script src="https://code.jquery.com/jquery-3.3.1.js"integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="crossorigin="anonymous"></script>
   <link rel="stylesheet" href="bounce.css">
 </head>
 <body>
-<!-- You can also target elements based on their positions using :odd or :even selectors.
+<!-- We're done playing with our jQuery playground. Let's tear it down!
 
-Note that jQuery is zero-indexed which means the first element in a selection has a position of 0. This can be a little confusing as, counter-intuitively, :odd selects the second element (position 1), fourth element (position 3), and so on.
+jQuery can target the body element as well.
 
-Here's how you would target all the odd elements with class target and give them classes:
+Here's how we would make the entire body fade out: $("body").addClass("animated fadeOut");
 
-$(".target:odd").addClass("animated shake");
-
-Try selecting all the even target elements and giving them the classes of animated and shake. Remember that even refers to the position of elements with a zero-based system in mind. -->
+But let's do something more dramatic. Add the classes animated and hinge to your body element. -->
 <script>
   $(document).ready(function() {
     $("#target1").css("color", "red");
@@ -28,6 +26,7 @@ Try selecting all the even target elements and giving them the classes of animat
     $("#left-well").children().css("color", "green");
     $(".target:nth-child(2)").addClass("animated bounce");
     $(".target:even").addClass("animated shake");
+     $("body").addClass("animated hinge")
 
   });
 </script>
