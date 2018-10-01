@@ -2,25 +2,26 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Free Code Camp:lesstion 7-jQuery: jQuery: Change the CSS of an Element Using jQuery</title>
+	<title>Free Code Camp:lesstion 8-jQuery: jQuery: Disable an Element Using jQuery</title>
 	<script src="https://code.jquery.com/jquery-3.3.1.js"integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="crossorigin="anonymous"></script>
   <link rel="stylesheet" href="bounce.css">
 </head>
 <body>
- <!--  In the same way you can add classes to an element with jQuery's addClass() function, you can remove them with jQuery's removeClass() function.
- 
- Here's how you would do this for a specific button:
- 
- $("#target2").removeClass("btn-default");
- 
- Let's remove the btn-default class from all of our button elements -->
+<!--  You can also change the non-CSS properties of HTML elements with jQuery. For example, you can disable buttons.
+
+When you disable a button, it will become grayed-out and can no longer be clicked.
+
+jQuery has a function called .prop() that allows you to adjust the properties of elements.
+
+Here's how you would disable all buttons:
+
+$("button").prop("disabled", true);
+
+Disable only the target1 button. -->
  <script>
   $(document).ready(function() {
-    $("button").addClass("animated bounce");
-    $(".well").addClass("animated shake");
-    $("#target3").addClass("animated fadeOut");
-    $("button").removeClass("btn-default");
     $("#target1").css("color", "red");
+    $("#target1").prop("disabled", true);
   });
 </script>
 
