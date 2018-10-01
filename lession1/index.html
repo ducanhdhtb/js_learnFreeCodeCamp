@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Free Code Camp:lesstion 7-jQuery: jQuery: jQuery: Remove Classes from an Element with jQuery</title>
+	<title>Free Code Camp:lesstion 7-jQuery: jQuery: Change the CSS of an Element Using jQuery</title>
 	<script src="https://code.jquery.com/jquery-3.3.1.js"integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="crossorigin="anonymous"></script>
   <link rel="stylesheet" href="bounce.css">
 </head>
@@ -19,7 +19,8 @@
     $("button").addClass("animated bounce");
     $(".well").addClass("animated shake");
     $("#target3").addClass("animated fadeOut");
-    $("#target2").removeClass("btn-default"); 
+    $("button").removeClass("btn-default");
+    $("#target1").css("color", "red");
   });
 </script>
 
